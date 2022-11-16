@@ -1,0 +1,306 @@
+:root{
+--color-back:hsl(30, 38%, 92%);
+--text-bkg:hsl(0, 0%, 100%);
+--font-grey:hsl(228, 12%, 48%);
+--font-dark:hsl(212, 21%, 14%);
+--font-green: hsl(158, 36%, 37%);
+}
+body{
+    margin: 0;
+    background-color:var(--color-back);
+    display: flex;
+    flex-direction: column;
+}
+#page{
+    box-sizing: border-box;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    width: 500px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 400px ;
+    grid-template-areas:
+     "imga txt footer";
+    border-radius: 15px;
+}
+.img1{
+    grid-area: imga;
+    background-image: url(design/image-product-desktop.jpg);
+    background-repeat:no-repeat ;
+    background-size: cover;
+    border-radius: 15px  0 0 15px;
+}
+.text{
+    grid-area: txt;
+    background-color:var(--text-bkg) ;
+    border-radius: 0 15px 15px 0;
+    padding-left: 30px;
+}
+.product, .info ,.p-cancel{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--font-grey);
+}
+.product{
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    
+}
+.brand{
+    font-family: 'Fraunces', serif;
+    font-weight: 1000;
+    line-height: 1;
+    color: var(--font-dark);
+}
+.box-info{
+    width: 200px;
+}
+.info{
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    margin-top: -15px;
+}
+.p-real{
+    font-family: 'Fraunces', serif;
+    color: var(--font-green);
+    font-size: 25px;
+    font-weight: 800;
+}
+.p-cancel{
+    align-self: center;
+    text-decoration-line: line-through ;
+    margin-left: 30px;
+    font-size: 12px;
+}
+.buy{
+    margin-top: -20px;
+    width: 200px;
+    height: 40px;
+    background-color: var(--font-green);
+    border: none;
+    border-radius: 10px;
+    color: var(--color-back);
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buy:hover{
+    background-color:hsl(158, 68%, 21%) ;
+}
+.buy:active{
+    background-color:hsl(158, 92%, 23%) ;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.cart{
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+}
+footer{
+    margin: auto;
+    margin-top: -40px;
+}
+@media (max-width:376px){
+    .container{
+        width: 350px;
+        height: 400px;
+        display: grid;
+        grid-template-columns: 350px;
+        grid-template-rows: 200px 340px;
+        grid-template-areas:
+         "imga"
+         "txt";
+        border-radius: 15px;
+    }
+    .img1{
+        grid-area: imga;
+        background-image: url(design/image-product-mobile.jpg);
+        background-repeat:no-repeat ;
+        background-size: cover;
+        border-radius: 15px  15px 0 0;
+    }
+    .text{
+    grid-area: txt;
+    background-color:var(--text-bkg) ;
+    border-radius: 0 0 15px 15px;
+    
+    }
+    .buy{
+        width: 300px;
+        height: 45px;
+    }
+    .box-info{
+        width: 300px;
+    }
+    .info{
+        font-size: 13px;
+    }
+    footer{
+        margin-top: -20px;
+    }
+}
+
+/*:root{
+--color-back:hsl(30, 38%, 92%);
+--text-bkg:hsl(0, 0%, 100%);
+--font-grey:hsl(228, 12%, 48%);
+--font-dark:hsl(212, 21%, 14%);
+--font-green: hsl(158, 36%, 37%);
+}
+body{
+    box-sizing: border-box;
+    background-color:var(--color-back);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    width: 500px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 400px ;
+    grid-template-areas:
+     "imga txt footer";
+    border-radius: 15px;
+}
+.img1{
+    grid-area: imga;
+    background-image: url(design/image-product-desktop.jpg);
+    background-repeat:no-repeat ;
+    background-size: cover;
+    border-radius: 15px  0 0 15px;
+}
+.text{
+    grid-area: txt;
+    background-color:var(--text-bkg) ;
+    border-radius: 0 15px 15px 0;
+    padding-left: 30px;
+}
+.product, .info ,.p-cancel{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--font-grey);
+}
+.product{
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    
+}
+.brand{
+    font-family: 'Fraunces', serif;
+    font-weight: 1000;
+    line-height: 1;
+    color: var(--font-dark);
+}
+.box-info{
+    width: 200px;
+}
+.info{
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    margin-top: -15px;
+}
+.p-real{
+    font-family: 'Fraunces', serif;
+    color: var(--font-green);
+    font-size: 25px;
+    font-weight: 800;
+}
+.p-cancel{
+    align-self: center;
+    text-decoration-line: line-through ;
+    margin-left: 30px;
+    font-size: 12px;
+}
+.buy{
+    margin-top: -20px;
+    width: 200px;
+    height: 40px;
+    background-color: var(--font-green);
+    border: none;
+    border-radius: 10px;
+    color: var(--color-back);
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buy:hover{
+    background-color:hsl(158, 68%, 21%) ;
+}
+.buy:active{
+    background-color:hsl(158, 92%, 23%) ;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.cart{
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+}
+
+@media (max-width:376px){
+    .container{
+        width: 350px;
+        height: 400px;
+        display: grid;
+        grid-template-columns: 350px;
+        grid-template-rows: 200px 340px;
+        grid-template-areas:
+         "imga"
+         "txt";
+        border-radius: 15px;
+    }
+    .img1{
+        grid-area: imga;
+        background-image: url(design/image-product-mobile.jpg);
+        background-repeat:no-repeat ;
+        background-size: cover;
+        border-radius: 15px  15px 0 0;
+    }
+    .text{
+    grid-area: txt;
+    background-color:var(--text-bkg) ;
+    border-radius: 0 0 15px 15px;
+    
+    }
+    .buy{
+        width: 300px;
+        height: 45px;
+    }
+    .box-info{
+        width: 300px;
+    }
+    .info{
+        font-size: 13px;
+    }
+}*/ 
